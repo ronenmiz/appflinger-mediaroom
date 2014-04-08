@@ -32,10 +32,11 @@ This approach allows HTML5 TV apps, like the one at www.youtube.com/tv, to run i
 ### Notes about the Mediaroom client
 
 This implementation is designed to run on in basically any Mediaroom device and given that Mediaroom does not support low latency video playback, the UI is rendered as a sequence of JPEG images. Adapting the client to render the UI as a low-latency video stream would be trivial, as long as Mediaroom supports low-latency video playback.
+
 Additionally, the current Mediaroom client implementation has the following limitations:
 - It lacks support for video seeking.
 - It provides the duration of videos in resolution of minutes (due to Mediaroom limitations).
-- I proxies videos as opposed to playing them directly from the source. This is because, at least for www.youtube.com/tv, the Mediaroom simulator (included in ADK 3.4) refused to play those URLs.
+- It proxies videos as opposed to playing them directly from the source. This is because, at least for www.youtube.com/tv, the Mediaroom simulator (included in ADK 3.4) refused to play those URLs.
 - When running in the Mediaroom simulator, it has to be online or else it won't play mp4 videos.
 - The Mediaroom simulator has A/V synch issues with MP4 files and those will be evident when the HTML5 TV app utilizes MP4 (most do, including YouTube).
 - The current client implementation is intended for demonstration purposes and as such it supports a single user only.
