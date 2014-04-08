@@ -1,0 +1,25 @@
+﻿<!--
+    You can find existing browser definitions at
+    <windir>\Microsoft.NET\Framework\<ver>\CONFIG\Browsers
+-->
+<browsers>
+    <browser id="MrmlBrowser" parentID="Default">
+        <identification>
+            <userAgent match="Microsoft-IPTV-Client" />
+        </identification>
+        <capture />
+        <capabilities />
+        <controlAdapters markupTextWriterType="Microsoft.TV.TVControls.OptimizedMrmlTextWriter" >
+          <adapter controlType="System.Web.UI.Page"
+                   adapterType="Microsoft.TV.TVControls.TVPageAdapter" />
+        </controlAdapters>
+    </browser>
+    <browser refID="IE">
+        <capture />
+        <capabilities />
+        <controlAdapters markupTextWriterType="Microsoft.TV.TVControls.OptimizedMrmlTextWriter">
+          <adapter controlType="System.Web.UI.Page"
+                   adapterType="Microsoft.TV.TVControls.TVPageAdapter" />
+        </controlAdapters>
+    </browser>
+</browsers>

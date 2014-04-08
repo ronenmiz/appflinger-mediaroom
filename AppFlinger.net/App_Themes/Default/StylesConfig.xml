@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This skin config file is based on the style.xml that ships with the Simulator.-->
+<skinconfig>
+  <contentfolder>
+    <!-- Assign content folder path of Simulator in "path" attribute-->
+    <!--This is the default path where the content folder will be installed by the installer.-->
+    <imagefolder path="C:\Program Files\Microsoft Mediaroom ADK 2.1\Content" />
+  </contentfolder>
+
+  <!-- Lists all skins definations to be used by the controls -->
+  <controlskins>
+    <!--
+      Create the controls skins in this section for each controls. For defining multiple skins
+      add multiple skin element for the specific control.
+      
+      These skins appear in the StyleClass property of the control.
+      
+      Attribute definition for Skin
+      1. name : name of the skin. 
+      2. controltype : the control name for which the skin is defined.
+         Following is the mapping for the controls
+         TVButton               -> Button
+         TVCheckbox             -> Checkbox
+         TVRadioButtonGroup     -> RadioButtonGroup
+         TVRadioButton          -> RadioButton
+         TVText                 -> EditText
+         TVLabel                -> Text
+         TVPage                 -> Page
+         TVPanel                -> Panel
+         TVHorizontalFlowPanel  -> HorizontalFlowPanel
+         TVVerticalFlowPanel    -> VerticalFlowPanel
+         TVList                 -> List
+         TVImage                -> Image
+         TVVideo                -> Video
+         TVMenu                 -> Menu
+         TVMenuItem             -> MenuItem
+         TVPanelFlipper         -> PanelFlipper
+         TVSubpage              -> Subpage
+      3. class  : name of the style class either from global section or local section.
+      If you want to use other styles defined in global and local sections then you will have to add
+      those here. By default some of the styles are listed here.
+    -->
+    <!--The default style for all TVControls. Please do not delete this entry.-->
+    <skin name="Plain" controltype="TVGadget" class="plain"/>
+    <!-- Button Skins -->
+    <skin name="Button" controltype="Button" class="Button"/>
+    <skin name="MenuButton" controltype="Button" class="Button.Menu"/>
+    <!-- Checkbox Skins -->
+    <skin name="Checkbox" controltype="Checkbox" class="Checkbox"/>
+
+    <!-- RadioButtonGroup Skins -->
+    <skin name="RadioButtonGroup" controltype="RadioButtonGroup" class="RadioButtonGroup"/>
+
+    <!-- RadioButton Skins -->
+    <skin name="RadioButton" controltype="RadioButton" class="RadioButton"/>
+
+    <!-- Text Skins -->
+    <skin name="Text" controltype="EditText" class="EditText"/>
+
+    <!-- Label Skins -->
+    <skin name="Label" controltype="Text" class="Text"/>
+    <skin name="CustomLabel" controltype="Text" class="CustomLabel"/>
+    <skin name="Label.Red" controltype="Text" class="Text.Red"/>
+
+    <!-- Page Skins -->
+    <skin name="MrmlPage" controltype="Page" class="MrmlPage"/>
+    <skin name="MrmlPage.Animated" controltype="Page" class="MrmlPage.Animated"/>
+    <skin name="Page" controltype="Page" class="Page"/>
+    <skin name="Page.Animated" controltype="Page" class="Page.Animated"/>
+
+    <!-- Panel Skins -->
+    <skin name="Panel" controltype="Panel" class="Panel"/>
+
+    <!-- HorizontalFlowPanel Skins -->
+    <skin name="HorizontalFlowPanel" controltype="HorizontalFlowPanel" class="HorizontalFlowPanel"/>
+
+    <!-- VerticalFlowPanel Skins -->
+    <skin name="VerticalFlowPanel" controltype="VerticalFlowPanel" class="VerticalFlowPanel"/>
+
+    <!-- List Skins -->
+    <skin name="List" controltype="List" class="List"/>
+
+    <!-- Image Skins -->
+    <skin name="Image" controltype="Image" class="Image"/>
+
+    <!-- Video Skins -->
+    <skin name="Video" controltype="Video" class="Video"/>
+
+    <!-- Menu Skins -->
+    <skin name="Menu" controltype="Menu" class="Menu"/>
+
+    <!-- MenuItem Skins -->
+    <skin name="MenuItem" controltype="MenuItem" class="MenuItem"/>
+
+    <!-- PanelFlipper Skins -->
+    <skin name="PanelFlipper" controltype="PanelFlipper" class="PanelFlipper"/>
+
+    <!-- Subpage Skins -->
+    <skin name="Subpage" controltype="Subpage" class="Subpage"/>
+
+    <!-- Ticker Skins -->
+    <skin name="TickerBottom" controltype="Ticker" class="TickerBottom"/>
+
+    <!-- BusyIndicator Skins -->
+    <skin name="Image.Busy.Indicator" controltype="BusyIndicator" class="Image.Busy.Indicator"/>
+
+  </controlskins>
+
+  <!-- 
+  Define all your control specific local style here.
+  The localstyles doesn't support style creation in hierarchy similar to global styles.
+  Also after creating any local style, it must be used in some skin or create a new skin for that
+  style, so that the style is available to the controls at the design time.
+  -->
+  <localstyles>
+    <styles>
+      <!--Create here your own styles-->
+      <!-- Local Label styles-->
+      <style class="CustomLabel" foreground="ARGB(255,0,0,0)" background="ARGB(255,255,255,255)" width="200"/>
+      <style class="Text.Red" foreground="ARGB(255,255,0,0)" />
+      <style class="Text.Yellow" foreground="ARGB(255,255,255,0)" />
+      <!-- Local Button styles-->
+      <style class="ButtonRed" foreground="ARGB(255,255,0,0)" background="ARGB(255,255,255,255)"/>
+    </styles>
+  </localstyles>
+
+  <!-- 
+  Global style contains the styles, constants, metaimages, fontstyle defined within the
+  simulator styles.xml file.
+  
+  You should copy the required styles, constants, metaimages, fontstyle from the style.xml file
+  and paste it here.
+  
+  NOTE: Never edit any value in the globalstyles section. If you want to edit/create new style
+  define a new style as per your requirement in the localstyles section. If you edit the global styles in this file
+  then you need to update the Styles.xml too.
+  -->
+  <globalstyles>
+    <styles>
+      <!-- COLORs in the system -->
+      <!-- These are Design-approved colors, -->
+      <constant name="Transparent" value="ARGB(0,0,0,0)"/>
+      <constant name="Primary" value="ARGB(255,235,235,235)"/>
+      <constant name="Secondary" value="ARGB(255,178,212,245)"/>
+      <constant name="Secondary50Percent" value="ARGB(128,178,212,245)"/>
+      <constant name="Secondary25Percent" value="ARGB(40,178,212,245)"/>
+      <constant name="Background" value="ARGB(178,1,12,29)"/>
+      <constant name="DarkBackground" value="ARGB(89,0,0,0)"/>
+      <constant name="VeryDarkBackground" value="ARGB(219,0,0,0)"/>
+      <constant name="DiagBackground" value="ARGB(150,13,128,80)"/>
+      <constant name="Highlight" value="ARGB(229,66,166,75)"/>
+      <constant name="Black" value="ARGB(255,0,15,52)"/>
+      <constant name="PitchBlack" value="ARGB(255,0,0,0)"/>
+
+      <!-- For text, only use colors that have a prefix text -->
+      <constant name="TextPrimary" value="ARGB(255,235,235,235)"/>
+      <constant name="TextAltPrimary" value="RGB(204,204,204)"/>
+      <constant name="TextFocusPrimary" value="ARGB(255,235,235,235)"/>
+      <constant name="TextFocusAltPrimary" value="ARGB(255,235,235,235)"/>
+      <constant name="TextSecondary" value="ARGB(204,116,149,240)"/>
+      <constant name="TextAltSecondary" value="RGB(178,212,245)"/>
+      <constant name="TextAltSecondaryDark" value="RGB(147,176,203)"/>
+      <constant name="TextSecondaryWhite" value="ARGB(229,235,235,235)"/>
+      <constant name="TextDark" value="ARGB(255,10,50,102)"/>
+      <constant name="TextVeryDark" value="ARGB(255,0,15,52)"/>
+      <constant name="TextPrimary25Percent" value="ARGB(64,235,235,235)"/>
+      <constant name="TextPrimary50Percent" value="ARGB(128,235,235,235)"/>
+      <constant name="TextPrimary70Percent" value="ARGB(179,235,235,235)"/>
+      <constant name="TextSecondary50Percent" value="ARGB(128,178,212,245)"/>
+      <constant name="TextBackgroundMatch" value="ARGB(255,2,43,147)"/>
+      <constant name="TextHeader" value="ARGB(153,235,235,235)"/>
+      <constant name="TextHeaderWhite" value="ARGB(128,235,235,235)"/>
+      <constant name="TextAltYellow" value="RGB(225,180,65)"/>
+
+      <!-- Distinct Emergency Alert System colors -->
+      <constant name="EasBlack" value="RGB(0,0,0)"/>
+      <constant name="EasWhite" value="RGB(255,255,255)"/>
+      <constant name="EasGrey" value="RGB(128,128,128)"/>
+      <constant name="EasRed" value="RGB(174,0,0)"/>
+      <constant name="EasYellow" value="RGB(225,192,37)"/>
+      <constant name="GuideCellOnNow" value="ARGB(64,255,255,255)"/>
+      <constant name="GuideCellOnLater" value="ARGB(25,255,255,255)"/>
+      <constant name="GuideCellTimeShift" value="ARGB(191,5,78,124)"/>
+      <!--constant name="TextAltSecondary" value="ARGB(255,147,176,203)" /-->
+      <!-- FONTs in the system -->
+      <constant name="TVReg" value="fonts/SegoeSb.ttf"/>
+      <constant name="TVBold" value="fonts/SegoeBd.ttf"/>
+      <constant name="TVItalic" value="fonts/SegoeSbI.ttf"/>
+      <constant name="TVBoldItalic" value="fonts/SegoeBI.ttf"/>
+      <constant name="TVHeader" value="fonts/SegoeBd.ttf"/>
+
+      <!-- Font styles-->
+      <fontstyles>
+        <font styleName="Reg16" fontFace="@TVReg" fontSize="16"/>
+        <font styleName="Reg17" fontFace="@TVReg" fontSize="17"/>
+        <font styleName="Reg18" fontFace="@TVReg" fontSize="18"/>
+        <font styleName="Reg20" fontFace="@TVReg" fontSize="20"/>
+        <font styleName="Reg22" fontFace="@TVReg" fontSize="22"/>
+        <font styleName="Reg24" fontFace="@TVReg" fontSize="24"/>
+        <font styleName="Reg26" fontFace="@TVReg" fontSize="26"/>
+        <font styleName="Reg28" fontFace="@TVReg" fontSize="28"/>
+        <font styleName="Reg30" fontFace="@TVReg" fontSize="30"/>
+        <font styleName="Reg32" fontFace="@TVReg" fontSize="32"/>
+        <font styleName="Reg36" fontFace="@TVReg" fontSize="36"/>
+        <font styleName="Reg39" fontFace="@TVReg" fontSize="39"/>
+        <font styleName="Reg42" fontFace="@TVReg" fontSize="42"/>
+        <font styleName="Reg48" fontFace="@TVReg" fontSize="48"/>
+        <font styleName="Reg56" fontFace="@TVReg" fontSize="56"/>
+        <font styleName="Reg64" fontFace="@TVReg" fontSize="64"/>
+        <font styleName="Reg72" fontFace="@TVReg" fontSize="72"/>
+
+        <font styleName="Bold16" fontFace="@TVBold" fontSize="16"/>
+        <font styleName="Bold17" fontFace="@TVBold" fontSize="17"/>
+        <font styleName="Bold18" fontFace="@TVBold" fontSize="18"/>
+        <font styleName="Bold20" fontFace="@TVBold" fontSize="20"/>
+        <font styleName="Bold22" fontFace="@TVBold" fontSize="22"/>
+        <font styleName="Bold24" fontFace="@TVBold" fontSize="24"/>
+        <font styleName="Bold26" fontFace="@TVBold" fontSize="26"/>
+        <font styleName="Bold28" fontFace="@TVBold" fontSize="28"/>
+        <font styleName="Bold30" fontFace="@TVBold" fontSize="30"/>
+        <font styleName="Bold32" fontFace="@TVBold" fontSize="32"/>
+        <font styleName="Bold36" fontFace="@TVBold" fontSize="36"/>
+        <font styleName="Bold39" fontFace="@TVBold" fontSize="39"/>
+        <font styleName="Bold42" fontFace="@TVBold" fontSize="42"/>
+        <font styleName="Bold48" fontFace="@TVBold" fontSize="48"/>
+        <font styleName="Bold56" fontFace="@TVBold" fontSize="56"/>
+        <font styleName="Bold64" fontFace="@TVBold" fontSize="64"/>
+        <font styleName="Bold72" fontFace="@TVBold" fontSize="72"/>
+
+        <font styleName="Italic16" fontFace="@TVItalic" fontSize="16"/>
+        <font styleName="Italic17" fontFace="@TVItalic" fontSize="17"/>
+        <font styleName="Italic18" fontFace="@TVItalic" fontSize="18"/>
+        <font styleName="Italic20" fontFace="@TVItalic" fontSize="20"/>
+        <font styleName="Italic22" fontFace="@TVItalic" fontSize="22"/>
+        <font styleName="Italic24" fontFace="@TVItalic" fontSize="24"/>
+        <font styleName="Italic26" fontFace="@TVItalic" fontSize="26"/>
+        <font styleName="Italic28" fontFace="@TVItalic" fontSize="28"/>
+        <font styleName="Italic30" fontFace="@TVItalic" fontSize="30"/>
+        <font styleName="Italic32" fontFace="@TVItalic" fontSize="32"/>
+        <font styleName="Italic36" fontFace="@TVItalic" fontSize="36"/>
+        <font styleName="Italic39" fontFace="@TVItalic" fontSize="39"/>
+        <font styleName="Italic42" fontFace="@TVItalic" fontSize="42"/>
+        <font styleName="Italic48" fontFace="@TVItalic" fontSize="48"/>
+        <font styleName="Italic56" fontFace="@TVItalic" fontSize="56"/>
+        <font styleName="Italic64" fontFace="@TVItalic" fontSize="64"/>
+        <font styleName="Italic72" fontFace="@TVItalic" fontSize="72"/>
+
+        <font styleName="BoldItalic16" fontFace="@TVBoldItalic" fontSize="16"/>
+        <font styleName="BoldItalic17" fontFace="@TVBoldItalic" fontSize="17"/>
+        <font styleName="BoldItalic18" fontFace="@TVBoldItalic" fontSize="18"/>
+        <font styleName="BoldItalic20" fontFace="@TVBoldItalic" fontSize="20"/>
+        <font styleName="BoldItalic22" fontFace="@TVBoldItalic" fontSize="22"/>
+        <font styleName="BoldItalic24" fontFace="@TVBoldItalic" fontSize="24"/>
+        <font styleName="BoldItalic26" fontFace="@TVBoldItalic" fontSize="26"/>
+        <font styleName="BoldItalic28" fontFace="@TVBoldItalic" fontSize="28"/>
+        <font styleName="BoldItalic30" fontFace="@TVBoldItalic" fontSize="30"/>
+        <font styleName="BoldItalic32" fontFace="@TVBoldItalic" fontSize="32"/>
+        <font styleName="BoldItalic36" fontFace="@TVBoldItalic" fontSize="36"/>
+        <font styleName="BoldItalic39" fontFace="@TVBoldItalic" fontSize="39"/>
+        <font styleName="BoldItalic42" fontFace="@TVBoldItalic" fontSize="42"/>
+        <font styleName="BoldItalic48" fontFace="@TVBoldItalic" fontSize="48"/>
+        <font styleName="BoldItalic56" fontFace="@TVBoldItalic" fontSize="56"/>
+        <font styleName="BoldItalic64" fontFace="@TVBoldItalic" fontSize="64"/>
+        <font styleName="BoldItalic72" fontFace="@TVBoldItalic" fontSize="72"/>
+
+        <font styleName="HeaderSmall" fontFace="@TVHeader" fontSize="32"/>
+        <font styleName="HeaderLarge" fontFace="@TVHeader" fontSize="40"/>
+        <font styleName="HeaderMenu" fontFace="@TVHeader" fontSize="50"/>
+      </fontstyles>
+
+      <!-- MetaImages section-->
+      <metaimages>
+        <metaimage name="ButtonBackground" image="Button_NoFocus.png" width="156" height="31"/>
+        <!-- slices="rect(5,5,151,26)" -->
+        <metaimage name="ButtonFocus" image="Button_Focus.png" width="156" height="31"/>
+        <!-- slices="rect(5,5,151,26)" -->
+        <metaimage name="ButtonFocusGlow" image="Button_Focus_Overlay.png" width="156" height="31"/>
+        <!-- slices="rect(5,5,151,26)" -->
+        <metaimage name="ButtonPressed" image="Button_Pressed.png" width="156" height="31"/>
+        <!-- slices="rect(5,5,151,26)" -->
+        <metaimage name="CheckboxSelect" image="Button_NoFocus.png" width="156" height="31" slices="rect(5,5,151,26)">
+          <symbol name="Switch.Symbol.Check.png" width="31" height="31" justification="right"/>
+        </metaimage>
+        <metaimage name="CheckboxSelectFocus" image="Button_Focus.png" width="156" height="31" slices="rect(5,5,151,26)">
+          <symbol name="Switch.Symbol.Check.png" width="31" height="31" justification="right"/>
+        </metaimage>
+        <metaimage name="CheckboxSelectDisabled" image="Button_NoFocus.png" width="156" height="31" slices="rect(5,5,151,26)">
+          <symbol name="Switch.Symbol.Check.Disabled.png" width="31" height="31" justification="right"/>
+        </metaimage>
+        <metaimage name="CheckboxSelectFocusDisabled" image="Button_Focus.png" width="156" height="31" slices="rect(5,5,151,26)">
+          <symbol name="Switch.Symbol.Check.Disabled.png" width="31" height="31" justification="right"/>
+        </metaimage>
+        <metaimage name="RadioButtonSelect" image="Radio_NoFocus.png" width="31" height="31">
+          <symbol name="Radio_Symbol_Dot_Selected.png" width="31" height="31"/>
+        </metaimage>
+        <metaimage name="RadioButtonSelectFocus" image="Radio_Focus.png" width="31" height="31">
+          <symbol name="Radio_Symbol_Dot_Selected.png" width="31" height="31"/>
+        </metaimage>
+        <metaimage name="EditBackground" image="EditBox_NoFocus.png" width="156" height="31" slices="rect(5,5,151,26)"/>
+        <metaimage name="EditFocusBackground" image="EditBox_Focus.png" width="156" height="31" slices="rect(5,5,151,26)"/>
+        <metaimage name="NavBar" image="NavBar_1.png" width="1" height="41" slices="rect(0,0,0,0)"/>
+      </metaimages>
+
+      <!-- Root style contains our defaults for everything -->
+      <style class="root" fontStyle="Reg18" background="@Transparent" foreground="@TextPrimary"/>
+      <style class="plain" />
+      <!-- important that this style exists and is the same as 'root' but exposed externally -->
+      <!-- OK, real styles start here -->
+
+      <!-- Video styles -->
+      <style class="Video" width="160" height="120" >
+        <!-- default size for video used by ASP.Net controls. Doesn't have to match Video.PIP -->
+        <style class="Video.FullScreen" noAnimations="true" left="0" top="0" width="640" height="480" fullscreen="true"/>
+        <style class="Video.PIP" left="47" top="77" width="160" height="120" padding="rect(5,50,5,5)"/>
+      </style>
+
+      <!-- Radio Button Group styles -->
+      <style class="RadioButtonGroup" left="0" width="3" background="@Transparent"/>
+
+      <!-- Radio Button styles -->
+      <style class="RadioButton" width="300" left="0" buttonWidth="31" buttonHeight="31" buttonSpace="10" fontStyle="Bold18" height="auto" wrap="true" textVOffset="3" layout="top" background="image(file:///Radio_NoFocus.png)" focusBackground="image(file:///Radio_Focus.png)" focusGlow="image(file:///Radio_Focus_Overlay.png)" pressed="image(file:///Radio_Pressed.png)" selectedBackground="metaimage(RadioButtonSelect)" focusSelectedBackground="metaimage(RadioButtonSelectFocus)"/>
+
+      <!-- Checkbox styles -->
+      <style class="Checkbox" width="300" left="0" height="31" buttonWidth="31" buttonHeight="31" buttonSpace="10" layout="center" background="metaimage(ButtonBackground)" focusBackground="metaimage(ButtonFocus)" focusGlow="metaimage(ButtonFocusGlow)" pressed="metaimage(ButtonPressed)" selectedBackground="metaimage(CheckboxSelect)" focusSelectedBackground="metaimage(CheckboxSelectFocus)" margin="rect(0,0,0,2)" wrap="false" clipchildren="true">
+        <style class="Checkbox.DarkTextBackground" width="350" textbackground="@DarkBackground" focustextbackground="@VeryDarkBackground"/>
+        <style class="Checkbox.Disabled" selectedBackground="metaimage(CheckboxSelectDisabled)" focusSelectedBackground="metaimage(CheckboxSelectFocusDisabled)">
+          <style class="Checkbox.Disabled.DarkTextBackground" width="350" textbackground="@DarkBackground" focustextbackground="@VeryDarkBackground"/>
+        </style>
+      </style>
+
+      <!-- Edit Text styles -->
+      <style class="EditText" background="metaimage(EditBackground)" focusBackground="metaimage(EditFocusBackground)" foreground="@TextVeryDark" highlight="@Highlight" fontStyle="Reg16" padding="rect(10,0,10,0)" layout="center" height="31" width="220" clipchildren="true" ellipsis="disallowed">
+        <style class="EditText.Channel" channelNumber="true" background="@Transparent" focusBackground="@Transparent" foreground="@TextPrimary" highlight="@Transparent" wrap="false" >
+        </style>
+      </style>
+
+      <!-- Button styles -->
+      <style class="Button" background="metaimage(ButtonBackground)" focusBackground="metaimage(ButtonFocus)" focusGlow="metaimage(ButtonFocusGlow)" pressed="metaimage(ButtonPressed)" foreground="@TextAltPrimary" focusForeground="@TextFocusAltPrimary" wrap="false" fontStyle="Bold18" padding="rect(10,5,0,0)" height="31" width="156" clipchildren="true" ellipsis="disallowed">
+        <style class="Button.Transparent" left="0" top="0" background="@Transparent" focusBackground="@Transparent" foreground="@Transparent" focusForeground="@Transparent" focusGlow="@Transparent"/>
+        <style class="Button.Menu" height="33" width="239" margin="rect(0,0,0,3)" padding="rect(10,2,11,0)" fontStyle="Bold20" justification="left" enablelogging="true"/>
+      </style>
+
+      <!-- HorizontalFlowPanel Image-->
+      <style class="HorizontalFlowPanel"/>
+
+      <!-- Panel styles -->
+      <style class="Panel" background="@Transparent">
+        <style class="Panel.Root" left="0" top="0" width="640" height="480"/>
+        <style class="Panel.Masthead" top="0" height="175" width="640" background="image(file:///BG_Masthead.png)"/>
+        <style class="Panel.MenuBackground" top="77" left="0" width="640" height="31" background="metaimage(NavBar)"/>
+      </style>
+
+      <!--Panel Flipper styles-->
+      <style class="PanelFlipper" background="@Transparent" panelInAnimation="QuickFadeIn" panelOutAnimation="QuickFadeOut" left="0" top="0" width="640" height="480"/>
+
+      <!--List styles-->
+      <style class="List" scrollUpArrowUrl="Arrow_Scroll_up.png" scrollDownArrowUrl="Arrow_Scroll_Down.png" arrowHeight="21" arrowWidth="21" arrowVOffset="2"/>
+
+      <!--VerticalFlowPanel styles-->
+      <style class="VerticalFlowPanel" background="@Transparent"/>
+
+      <!-- Page styles -->
+      <style class="MrmlPage" limoLine="3000" clipchildren="true" >
+        <style class="MrmlPage.Animated" inForwardAnimations="PageInForward" inBackwardAnimations="PageInBackward" outForwardAnimations="PageOutForward" outBackwardAnimations="PageOutBackward" BackgroundContent="Background_VideoAndBlueOverLay.xml"/>
+        <style class="Page" limoLine="400" left="0" top="0" width="640" height="480" clipchildren="true" >
+          <style class="Page.Animated" inForwardAnimations="PageInForward" inBackwardAnimations="PageInBackward" outForwardAnimations="PageOutForward" outBackwardAnimations="PageOutBackward" BackgroundContent="Background_VideoAndBlueOverLay.xml"/>
+        </style>
+
+        <!-- Subpage styles -->
+        <style class="Subpage" background="@Transparent" left="0" top="0" width="640" height="380"/>
+
+        <!-- Menu styles -->
+        <style class="Menu" top="59" left="0" leftBracketURL="Arrow_NavMenu_Left.png" rightBracketURL="Arrow_NavMenu_Right.png" bracketheight="25" bracketWidth="25" spaceAfterLeftBracket="12" spaceBeforeRightBracket="12" spaceBetweenBracketAndNonSelectItem="18" spaceBetweenTwoNonSelectItem="27" background="@Transparent" leftInAnimation="MenuInLeft" leftOutAnimation="MenuOutLeft" rightInAnimation="MenuInRight" rightOutAnimation="MenuOutRight">
+          <style class="Menu.Start" selectedItemVOffset="-6" unselectedItemVOffset="-6" top="8" left="102"/>
+          <style class="Menu.BrowseBar" top="0" left="200" scale="78"/>
+          <style class="Menu.Top" top="5" left="70" bracketheight="21" bracketWidth="21" spaceAfterLeftBracket="8" spaceBeforeRightBracket="8" spaceBetweenBracketAndNonSelectItem="19" spaceBetweenTwoNonSelectItem="25" selectedItemVOffset="-7" unselectedItemVOffset="-6"/>
+        </style>
+
+        <!-- MenuItem styles -->
+        <style class="MenuItem" background="@Transparent" selectedforeground="@TextPrimary" foreground="@TextAltPrimary" unselectedFontStyle="Reg20" selectedFontStyle="Bold24" top="100" height="30" wrap="false" layout="center" ellipsis="allowed" padding="rect(0,0,0,0)" margin="rect(0,0,0,0)">
+          <style class="MenuItem.Small" unselectedFontStyle="Bold18" selectedFontStyle="Bold22"/>
+          <style class="MenuItem.MainMenu" selectedFontStyle="Bold26"/>
+        </style>
+
+        <!-- Image styles -->
+        <style class="Image"/>
+
+        <!-- Text styles -->
+        <style class="Text" background="@Transparent">
+          <style class="Text.HeaderTitle" wrap="false" left="99" top="9" width="400" height="69" layout="bottom" foreground="@TextHeader" fontStyle="HeaderSmall"/>
+          <style class="Text.Clock" left="481" top="50" justification="right" width="100" height="59" maxheight="59" foreground="@TextPrimary" fontStyle="Bold18"/>
+        </style>
+
+        <!-- Busy Indicator -->
+        <style class="Image.Busy.Indicator" visible="false" stretchmode="normal" KeepAspectratio="true" top="380" left="530" url="file:///spinner.png" height="60" width="60" hideanimations="BusyOut" showanimations="BusyIn" CelWidth="80" CelHeight="80" CelCount="12" CelSpeed="1.0">
+          <style class="Image.Busy.Indicator.Video" MaxHeight="60" RelativeHeight="15" justification="center" layout="center"></style>
+        </style>
+      </style>
+    </styles>
+  </globalstyles>
+</skinconfig>
