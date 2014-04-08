@@ -45,5 +45,5 @@ Additionally, the current Mediaroom client implementation has the following limi
   - Where:
   - The host:port of the Mediaroom app should be replaced with the IIS server host and port.
   - The host:port of AppFlinger server should be replaced with the cloud server information provided by TVersity.
-  - The session id should be the session created for the given user.
+  - The session id should be the cloud browser session created for the given user.
   - The fps should be a number between 1 to 5, depending on what the network and set-top box can handle.
