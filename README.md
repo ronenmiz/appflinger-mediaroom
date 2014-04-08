@@ -40,3 +40,9 @@ Additionally, the current Mediaroom client implementation has the following limi
 - When running in the Mediaroom simulator, it has to be online or else it won't play mp4 videos.
 - The Mediaroom simulator has A/V synch issues with MP4 files and those will be evident when the HTML5 TV app utilizes MP4 (most do, including YouTube).
 - The current client implementation is intended for demonstration purposes and as such it supports a single user only.
+- The URL to put into the simulator is as follows:
+  page:http://<host:port of Mediaroom app>/Default.aspx?host=<host:port of AppFlinger server>&session_id=<session id>&fps=<frames per second>
+  - The host:port of the Mediaroom app should be replaced with the IIS server host and port.
+  - The host:port of AppFlinger server should be replaced with the cloud server information provided by TVersity.
+  - The session id should be the session created for the given user.
+  - The fps should be a number between 1 to 5, depending on what the network and set-top box can handle.
