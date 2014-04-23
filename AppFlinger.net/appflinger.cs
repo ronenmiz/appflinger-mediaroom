@@ -344,9 +344,14 @@ namespace AppFlinger
             t.Start();
         }
 
-        public void AppFlingerStop()
+        public void AppFlingerStopAsync()
         {
             _shouldStop = true;
+        }
+
+        public void AppFlingerStop()
+        {
+            AppFlingerStopAsync();
             t.Join();
         }
     }

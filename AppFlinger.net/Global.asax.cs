@@ -20,7 +20,8 @@ namespace AppFlinger
         private static volatile float _duration = -1;
         private static bool _loaded = false;
         private static bool _paused = true;
-        private static AppFlinger appflinger = null;
+        private static AppFlinger _appflinger = null;
+        private static AppFlingerCB _appFlingerCB;
 
         public static bool VideoStateChanged
         {
@@ -221,11 +222,24 @@ namespace AppFlinger
 
         public static void AppFlingerStart(string host, string sessionId)
         {
-            if (appflinger == null)
+            // Reset the state variables
+            _videoURL = null;
+            _videoStateChanged = false;
+            _videoState = "";
+            _duration = -1;
+            _loaded = false;
+            _paused = true;
+
+            if (_appflinger == null)
             {
-                appflinger = new AppFlinger();
-                AppFlingerCB appFlingerCB = new AppFlingerCB();
-                appflinger.AppFlingerStart(host, sessionId, appFlingerCB);
+                _appflinger = new AppFlinger();
+                _appFlingerCB = new AppFlingerCB();
+                _appflinger.AppFlingerStart(host, sessionId, _appFlingerCB);
+            }
+            else
+            {
+                _appflinger.AppFlingerStopAsync();
+                _appflinger.AppFlingerStart(host, sessionId, _appFlingerCB);
             }
         }
 
